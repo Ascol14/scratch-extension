@@ -1,3 +1,19 @@
+// ==============import three js ==============
+
+var head= document.getElementsByTagName('head')[0];
+var script= document.createElement('script');
+script.src= 'https://unpkg.com/three@0.146.0/build/three.module.js';
+head.appendChild(script);
+
+import * as THREE from 'three';
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
+
 // ============== linear algebra ============== 
 
 const from_s = s => (''+s).split(' ').map(s=> s.split(',').map(v=> isNaN(+v) ? 0 : +v))
@@ -87,7 +103,7 @@ class ScratchMath {
 
 	getInfo() {
 	    return {
-	    	id: "math",
+	    	id: "3D",
 	    	name: "Math",
 	    	blocks: [
 	        auto_block('reporter', "Vec", "vector [a] [b] [c]"),
