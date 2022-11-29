@@ -3,6 +3,7 @@
 var head= document.getElementsByTagName('head')[0];
 var script= document.createElement('script');
 script.src= 'https://unpkg.com/three@0.146.0/build/three.module.js';
+script.type = "module"
 head.appendChild(script);
 
 var head= document.getElementsByTagName('head')[0];
