@@ -7,7 +7,7 @@ head.appendChild(script);
 
 var head= document.getElementsByTagName('head')[0];
 var script= document.createElement('script');
-script.src= 'https://raw.githubusercontent.com/Ascol14/scratch-extension/main/three_setup.js';
+script.src= 'https://raw.githubusercontent.com/Ascol14/scratch-extension/main/three-setup.js';
 script.type = "module"
 head.appendChild(script);
 
