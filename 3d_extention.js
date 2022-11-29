@@ -6,11 +6,13 @@ script.src= 'https://unpkg.com/three@0.146.0/build/three.module.js';
 script.type = "module"
 head.appendChild(script);
 
+fetch('https://raw.githubusercontent.com/Ascol14/scratch-extension/main/three-setup.js').then(r=>r.text()).then(t=>{
 var head= document.getElementsByTagName('head')[0];
 var script= document.createElement('script');
-script.src= 'https://raw.githubusercontent.com/Ascol14/scratch-extension/main/three-setup.js';
+script.innerHTML= t;
 script.type = "module"
 head.appendChild(script);
+})
 
 // ============== linear algebra ============== 
 
